@@ -15,6 +15,6 @@ def fake_print_colour_map():
 
 result = print_color_map()
 print_output=fake_print_colour_map()
-assert (print_output=2)
+assert (print_output==2)
 assert(result == 25)
 print("All is well (maybe!)\n")
