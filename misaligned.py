@@ -8,9 +8,9 @@ def print_color_map():
     return len(major_colors) * len(minor_colors)
 
 @patch('builtins.print')
-def fake_print_colour_map():
+def fake_print_colour_map(mock_p):
     print_color_map()
-    fake_print_colour_map.assert_called_with('2')
+    mock_p.assert_called_with('2')
 
 
 result = print_color_map()
