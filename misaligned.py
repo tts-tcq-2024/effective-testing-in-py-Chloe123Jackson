@@ -1,4 +1,4 @@
-from unittest.mock import patch
+import unittest.mock
 def print_color_map():
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
@@ -7,12 +7,13 @@ def print_color_map():
             print(f'{i * 5 + j} | {major} | {minor}')
     return len(major_colors) * len(minor_colors)
 
-@patch('builtins.print')
-def fake_print_colour_map(mock_p):
-    print_color_map()
-    mock_p.assert_called_with('2')
 
+def fake_print_colour_map():
+    mock = Mock()
+   mock.print_colour_map()
+   mock.method.assert_called_with('2')
 
 result = print_color_map()
+output=fake_print_colour_map()
 assert(result == 25)
 print("All is well (maybe!)\n")
