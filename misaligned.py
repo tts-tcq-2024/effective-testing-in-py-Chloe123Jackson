@@ -1,3 +1,4 @@
+import io
 from unittest.mock import patch
 def print_color_map():
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
