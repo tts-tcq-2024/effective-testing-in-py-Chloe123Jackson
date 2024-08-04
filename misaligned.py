@@ -10,10 +10,9 @@ def print_color_map():
 @patch('builtins.print')
 def fake_print_colour_map():
     print_color_map()
-    mock_print.assert_called_with('2')
+    fake_print_colour_map.assert_called_with('2')
 
 
 result = print_color_map()
-print_output=fake_print_colour_map()
 assert(result == 25)
 print("All is well (maybe!)\n")
