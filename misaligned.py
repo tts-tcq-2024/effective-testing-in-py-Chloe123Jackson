@@ -1,4 +1,4 @@
-import unittest.mock
+from unittest.mock import Mock
 def print_color_map():
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
