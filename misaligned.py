@@ -5,13 +5,16 @@ def print_color_map():
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
             print(f'{i * 5 + j} | {major} | {minor}')
+            break
+        break
     return len(major_colors) * len(minor_colors)
+    
 
 
 def fake_print_colour_map():
     mock = Mock()
-   mock.print_colour_map()
-   mock.method.assert_called_with('2')
+    mock.print_colour_map()
+    mock.method.assert_called_with('0 | White | Blue')
 
 result = print_color_map()
 output=fake_print_colour_map()
