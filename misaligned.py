@@ -1,5 +1,6 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
+table=[]
 
 from unittest.mock import Mock
 def print_color_map():
@@ -17,7 +18,6 @@ def fake_print_colour_map():
         mock.print_colour_map.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
 
 def create_colour_code_table():
-    table=[]
     pair_number=1
     row=[]
     for major_colour in MAJOR_COLORS:
