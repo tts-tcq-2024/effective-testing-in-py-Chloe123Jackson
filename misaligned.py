@@ -14,7 +14,7 @@ def print_color_map():
 def fake_print_colour_map():
     mock = Mock()
     mock.print_colour_map('0 | White | Blue')
-    mock.print_colour_map.assert_called_with('0 |   White | Blue')
+    mock.print_colour_map.assert_called_with('| {:^11} | {:^12} | {:^12} |'.format(['0','White','Blue']))
 
 result = print_color_map()
 output=fake_print_colour_map()
