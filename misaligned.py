@@ -14,7 +14,7 @@ def print_color_map():
 def fake_print_colour_map():
     mock = Mock()
     for row in table:
-        mock.print_colour_map('{:^2} | {:^6} | {:^6} |'.format(*row))
+        mock.print_colour_map()
         mock.print_colour_map.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
 
 def create_colour_code_table():
