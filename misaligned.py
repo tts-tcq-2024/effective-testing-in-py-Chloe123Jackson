@@ -16,7 +16,7 @@ def print_color_map():
 def fake_print_colour_map(mock_print):
     print_color_map()
     for row in table:
-        mock_print.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
+        mock_print.assert_called_with(3)
         
     
 # def fake_print_colour_map():
