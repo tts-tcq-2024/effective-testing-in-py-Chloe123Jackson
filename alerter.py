@@ -1,4 +1,4 @@
-import unittest.mock
+from unittest.mock import Mock
 alert_failure_count = 0
 counter=0
 
