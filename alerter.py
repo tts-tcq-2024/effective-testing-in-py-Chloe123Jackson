@@ -58,12 +58,15 @@ def failure_count(celcius):
 def alert_in_celcius(farenheit):
     celcius = (farenheit - 32) * 5 / 9
     failure_count(celcius)
+    return celcius
        
 
-
-alert_in_celcius(400.5)
+celcius_check=alert_in_celcius(400.5)
+assert(celcius_check==range(204.72,204.74))
 alert_in_celcius(303.6)
+assert(celcius_check==range(150.89,150.90))
 alert_in_celcius(20)
+assert(celcius_check=range(-6.68,-6.67))
 assert (alert_failure_count==1)
 print(f'{alert_failure_count} alerts failed.')
 print('All is well (maybe!)')
