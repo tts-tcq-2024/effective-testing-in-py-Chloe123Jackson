@@ -6,6 +6,8 @@ def network_alert_stub(celcius):
     # Return 200 for ok
     # Return 500 for not-ok
     # stub always succeeds and returns 200
+    global counter
+    counter+=1
     if counter%3==0:
         return 500
     else:
