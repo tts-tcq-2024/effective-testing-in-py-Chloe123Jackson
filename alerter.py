@@ -64,7 +64,7 @@ def alert_in_celcius(farenheit):
 celcius_check=alert_in_celcius(400.5)
 assert(204.72<=celcius_check<=204.74)
 alert_in_celcius(303.6)
-assert(150.89<=celcius_check<=150.90)
+assert(150.88<=celcius_check<=150.89)
 alert_in_celcius(20)
 assert(-6.68<=celcius_check<=-6.67)
 assert (alert_failure_count==1)
