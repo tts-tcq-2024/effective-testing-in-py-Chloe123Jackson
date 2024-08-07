@@ -9,7 +9,7 @@ def network_alert_stub(celcius):
     counter += 1
     if counter%3==0:
         return 500
-    else
+    else:
         return 200
 
 def alert_in_celcius(farenheit):
