@@ -26,15 +26,15 @@ def alert_in_celcius(farenheit):
         alert_failure_count += 0
 
 @patch("builtins.print")
-def fake_print_alert(mock_print):
-    network_alert_stub(50)
-    mock_print.assert_called_with('ALERT: Temperature is 30 celcius')
+def fake_print_alert(mock_print,celcius):
+    network_alert_stub(celcius)
+    mock_print.assert_called_with('ALERT: Temperature is ' + str(celcius) + ' celcius')
 
 # mock print to be created to test the behaviour
 alert_in_celcius(400.5)
 alert_in_celcius(303.6)
 alert_in_celcius(20)
-fake_print_alert()
+fake_print_alert(30)
 
 assert (alert_failure_count==1)
 print(f'{alert_failure_count} alerts failed.')
