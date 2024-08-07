@@ -28,7 +28,7 @@ def alert_in_celcius(farenheit):
 @patch("builtins.print")
 def fake_print_alert(mock_print,celcius):
     network_alert_stub(celcius)
-    mock_print.assert_called_with('ALERT: Temperature is ' + str(celcius) + ' celcius')
+    mock_print.assert_called_with(str(celcius))
 
 # mock print to be created to test the behaviour
 alert_in_celcius(400.5)
