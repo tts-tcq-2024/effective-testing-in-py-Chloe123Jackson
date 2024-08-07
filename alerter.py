@@ -26,7 +26,7 @@ def alert_in_celcius(farenheit):
         alert_failure_count += 0
 
 @patch("builtins.print")
-def fake_print_alert(mock_print,celcius):
+def fake_print_alert(celcius,mock_print):
     network_alert_stub(celcius)
     str_celcius=str(celcius)
     print(type(str_celcius))
