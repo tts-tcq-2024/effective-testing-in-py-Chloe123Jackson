@@ -34,7 +34,7 @@ def fake_print_alert(celcius):
 alert_in_celcius(400.5)
 alert_in_celcius(303.6)
 alert_in_celcius(20)
-fake_print_alert(celcius)
+fake_print_alert(50)
 
 assert (alert_failure_count==1)
 print(f'{alert_failure_count} alerts failed.')
