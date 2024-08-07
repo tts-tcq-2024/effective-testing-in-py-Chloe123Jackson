@@ -1,28 +1,31 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
 table=[]
+i=0
 
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 def print_color_map():
-    major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
-    minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
+    global major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
+    global minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
             print(f'{i * 5 + j} | {major} | {minor}')
     return len(major_colors) * len(minor_colors)
 
-# @patch("builtins.print")
-# def fake_print_colour_map(mock_print):
-#     print_color_map()
-#     mock_print.assert_called_with(3)
+@patch("builtins.print")
+def fake_print_colour_map(mock_print):
+    for i, major in enumerate(major_colors):
+        for j, minor in enumerate(minor_colors):
+            print(f'{i * 5 + j} | {major} | {minor}')
+            mock_print.assert_called_with()
         
     
 def fake_print_colour_map():
     mock = Mock()
-    for row in table:
-        mock.print_colour_map()
-        mock.print_colour_map.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
+    for i, major in enumerate(major_colors):
+        for j, minor in enumerate(minor_colors):
+            print(f'{i * 5 + j} | {major} | {minor}')
 
 def create_colour_code_table():
     pair_number=1
