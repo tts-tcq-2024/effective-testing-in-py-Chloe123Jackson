@@ -1,4 +1,4 @@
-from unittest.mock import Mock
+from unittest.mock import patch
 alert_failure_count = 0
 counter=0
 
@@ -25,10 +25,10 @@ def alert_in_celcius(farenheit):
         global alert_failure_count
         alert_failure_count += 0
 
-def fake_print_alert(celcius):
-    mock = Mock()
-    mock.alert_in_celcius(celcius)
-    mock.alert_in_celcius.assert_called_with('3')
+@patch("builtins.print")
+def fake_print_alert(mock_print):
+    network_alert_stub(celcius)
+    mock_print.assert_called_with('3')
 
 # mock print to be created to test the behaviour
 alert_in_celcius(400.5)
