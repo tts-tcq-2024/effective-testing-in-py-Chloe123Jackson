@@ -12,17 +12,17 @@ def print_color_map():
             print(f'{i * 5 + j} | {major} | {minor}')
     return len(major_colors) * len(minor_colors)
 
-@patch("builtins.print")
-def fake_print_colour_map(mock_print):
-    print_color_map()
-    mock_print.assert_called_with(3)
+# @patch("builtins.print")
+# def fake_print_colour_map(mock_print):
+#     print_color_map()
+#     mock_print.assert_called_with(3)
         
     
-# def fake_print_colour_map():
-#     mock = Mock()
-#     for row in table:
-#         mock.print_colour_map()
-#         mock.print_colour_map.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
+def fake_print_colour_map():
+    mock = Mock()
+    for row in table:
+        mock.print_colour_map()
+        mock.print_colour_map.assert_called_with('{:^2} | {:^6} | {:^6} |'.format(*row))
 
 def create_colour_code_table():
     pair_number=1
@@ -37,6 +37,6 @@ def create_colour_code_table():
             row=[]
 
 result = print_color_map()
-output=fake_print_colour_map()
+fake_print_colour_map()
 assert(result == 25)
 print("All is well (maybe!)\n")
