@@ -29,6 +29,7 @@ def alert_in_celcius(farenheit):
 def fake_print_alert(mock_print,celcius):
     network_alert_stub(celcius)
     str_celcius=str(celcius)
+    print(type(str_celcius))
     mock_print.assert_called_with('ALERT: Temperature is '+str_celcius+' celcius')
 
 # mock print to be created to test the behaviour
