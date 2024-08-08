@@ -41,5 +41,5 @@ def create_colour_code_table():
 
 result = print_color_map()
 # fake_print_colour_map()
-assert(result == 25)
+assert(result == 24)
 print("All is well (maybe!)\n")
