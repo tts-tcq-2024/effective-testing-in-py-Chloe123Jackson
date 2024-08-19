@@ -10,8 +10,11 @@ def print_color_map():
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
-            print(f'{i * 5 + j} | {major} | {minor}')
+            print_row(i * 5 + j,major, minor)
     return len(major_colors) * len(minor_colors)
+
+def print_row(row_number,major,minor):
+    print(f'{i * 5 + j} | {major} | {minor}')
 
 # @patch("builtins.print")
 # def fake_print_colour_map(mock_print):
@@ -42,4 +45,5 @@ def create_colour_code_table():
 result = print_color_map()
 # fake_print_colour_map()
 assert(result == 24)
+assert(table[0][0][0]== )
 print("All is well (maybe!)\n")
