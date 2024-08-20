@@ -42,5 +42,5 @@ ref_table=create_colour_code_table()
 # print(ref_table)
 print_color_map()
 # print(result)
-# assert table == ref_table
+assert create_colour_code_table() == print_color_map()
 print("All is well (maybe!)\n")
