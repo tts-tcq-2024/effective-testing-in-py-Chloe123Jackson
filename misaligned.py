@@ -33,7 +33,7 @@ def create_colour_code_table():
             row.append(minor)
             table.append(row)
             pair_number+=1
-            row=[].
+            row=[]
     return table
 
 # result = print_color_map()
