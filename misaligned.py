@@ -1,6 +1,7 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
 table=[]
+table_mock=[]
 i=0
 
 from unittest.mock import patch, Mock
@@ -14,14 +15,16 @@ def print_color_map():
     return len(major_colors) * len(minor_colors)
 
 def print_row(row_number,major,minor):
-    print(f'{i * 5 + j} | {major} | {minor}')
+    
+    print(f'{row_number} | {major} | {minor}')
+    
 
-# @patch("builtins.print")
-# def fake_print_colour_map(mock_print):
-#     for i, major in enumerate(major_colors):
-#         for j, minor in enumerate(minor_colors):
-#             print(f'{i * 5 + j} | {major} | {minor}')
-#             mock_print.assert_called_with()
+@patch("print_row")
+def fake_print_colour_map(mock_print_row):
+    for i, major in enumerate(major_colors):
+        for j, minor in enumerate(minor_colors):
+            mock_print_row.return_value=table_mock.append([i*5+j,major,minor])
+            
         
     
 # def fake_print_colour_map():
@@ -45,5 +48,5 @@ def create_colour_code_table():
 result = print_color_map()
 # fake_print_colour_map()
 assert(result == 24)
-assert(table[0][0][0]== )
+assert(table== table_mock)
 print("All is well (maybe!)\n")
