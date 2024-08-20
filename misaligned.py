@@ -25,7 +25,7 @@ def fake_print_colour_map(row_number,major,minor,mock_print_row):
 def create_colour_code_table():
     row=[]
     pair_number=1
-    for i in enumerate(MAJOR_COLORS):
+    for i,major in enumerate(MAJOR_COLORS):
         for j, minor in enumerate(MINOR_COLORS):
             row.append(i*5+j+1)
             row.append(major)
