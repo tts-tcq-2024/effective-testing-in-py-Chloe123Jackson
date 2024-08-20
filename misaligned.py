@@ -19,10 +19,8 @@ def print_row(row_number,major,minor):
     
 
 @patch("misaligned.print_row")
-def fake_print_colour_map(mock_print_row):
-    for i, major in enumerate(MAJOR_COLORS):
-        for j, minor in enumerate(MINOR_COLORS):
-            mock_print_row.return_value=table_mock.append([i*5+j,major,minor])
+def fake_print_colour_map(row_number,major,minor,mock_print_row):
+    mock_print_row.return_value=table_mock.append(row_number,major,minor])
 
 def create_colour_code_table():
     row=[]
