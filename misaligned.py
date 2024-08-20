@@ -19,7 +19,7 @@ def print_row(row_number,major,minor):
     print(f'{row_number} | {major} | {minor}')
     
 
-@patch("print_row")
+@patch("misaligned.print_row")
 def fake_print_colour_map(mock_print_row):
     for i, major in enumerate(MAJOR_COLORS):
         for j, minor in enumerate(MINOR_COLORS):
