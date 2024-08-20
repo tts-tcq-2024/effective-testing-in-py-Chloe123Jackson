@@ -38,7 +38,7 @@ def create_colour_code_table():
 # result = print_color_map()
 # assert(result == 25)
 ref_table=create_colour_code_table()
-print(ref_table)
+# print(ref_table)
 result=print_color_map()
 print(result)
 # assert table == ref_table
