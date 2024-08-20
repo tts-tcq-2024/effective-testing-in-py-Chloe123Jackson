@@ -36,6 +36,6 @@ def create_colour_code_table():
             row=[]
 
 # result = print_color_map()
-assert(result == 25)
+# assert(result == 25)
 assert print_color_map() == table
 print("All is well (maybe!)\n")
