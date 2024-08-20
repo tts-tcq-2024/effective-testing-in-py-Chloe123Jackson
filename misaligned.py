@@ -25,12 +25,13 @@ def fake_print_colour_map(row_number,major,minor,mock_print_row):
 def create_colour_code_table():
     row=[]
     pair_number=1
-    for i,major in enumerate(MAJOR_COLORS):
-        for j, minor in enumerate(MINOR_COLORS):
-            row.append(i*5+j+1)
+    for major in MAJOR_COLORS:
+        for minor in MINOR_COLORS:
+            row.append(pair_number)
             row.append(major)
             row.append(minor)
             table.append(row)
+            pair_number+=1
             row=[]
 
 # result = print_color_map()
