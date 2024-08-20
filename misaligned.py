@@ -40,6 +40,6 @@ def create_colour_code_table():
 ref_table=create_colour_code_table()
 # print(ref_table)
 result=print_color_map()
-print(result)
+# print(result)
 # assert table == ref_table
 print("All is well (maybe!)\n")
