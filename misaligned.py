@@ -1,6 +1,5 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
-table=[]
 table_mock=[]
 i=0
 
@@ -37,6 +36,7 @@ def create_colour_code_table():
 
 # result = print_color_map()
 # assert(result == 25)
+table=create_colour_code_table()
 print(table)
 # assert print_color_map() == create_colour_code_table()
 assert table_mock == table
