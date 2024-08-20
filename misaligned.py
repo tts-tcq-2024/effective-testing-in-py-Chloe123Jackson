@@ -37,8 +37,8 @@ def create_colour_code_table():
 
 # result = print_color_map()
 # assert(result == 25)
-table=create_colour_code_table()
-print(table)
-# assert print_color_map() == create_colour_code_table()
-assert table_mock == table
+ref_table=create_colour_code_table()
+print(ref_table)
+table,result=print_color_map()
+assert table == ref_table
 print("All is well (maybe!)\n")
