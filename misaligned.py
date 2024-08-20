@@ -26,7 +26,8 @@ def fake_print_colour_map(mock_print_row):
 
 def create_colour_code_table():
     row=[]
-    for i, major in enumerate(MAJOR_COLORS):
+    pair_number=1
+    for i in enumerate(MAJOR_COLORS):
         for j, minor in enumerate(MINOR_COLORS):
             row.append(i*5+j+1)
             row.append(major)
@@ -34,7 +35,7 @@ def create_colour_code_table():
             table.append(row)
             row=[]
 
-result = print_color_map()
+# result = print_color_map()
 assert(result == 25)
 assert print_color_map() == table
 print("All is well (maybe!)\n")
