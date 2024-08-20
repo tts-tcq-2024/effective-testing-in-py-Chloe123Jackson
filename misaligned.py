@@ -21,8 +21,8 @@ def print_row(row_number,major,minor):
 
 @patch("print_row")
 def fake_print_colour_map(mock_print_row):
-    for i, major in enumerate(major_colors):
-        for j, minor in enumerate(minor_colors):
+    for i, major in enumerate(MAJOR_COLORS):
+        for j, minor in enumerate(MINOR_COLORS):
             mock_print_row.return_value=table_mock.append([i*5+j,major,minor])
             
         
@@ -48,5 +48,5 @@ def create_colour_code_table():
 result = print_color_map()
 # fake_print_colour_map()
 assert(result == 24)
-assert(table== table_mock)
+assert(table== print_colour_map)
 print("All is well (maybe!)\n")
