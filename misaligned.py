@@ -23,6 +23,7 @@ def fake_print_colour_map(row_number,major,minor,mock_print_row):
 
 def create_colour_code_table():
     row=[]
+    table=[]
     pair_number=1
     for major in MAJOR_COLORS:
         for minor in MINOR_COLORS:
