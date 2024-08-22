@@ -8,4 +8,4 @@ class Misaligned_test(unittest.TestCase):
     global table_mock
     table_mock.append([row_number,major,minor])
     mock_print_row.returnvalue = table_mock
-    assert create_colour_code_table() == print_color_map()
+    assert misaligned.create_colour_code_table() == misaligned.print_color_map()
