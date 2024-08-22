@@ -46,3 +46,6 @@ class Misaligned_test(unittest.TestCase):
 result = print_color_map()
 assert(result == 25)
 print("All is well (maybe!)\n")
+
+if __name__ == '__main__':
+  unittest.main()
