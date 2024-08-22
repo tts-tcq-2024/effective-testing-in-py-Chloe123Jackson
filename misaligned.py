@@ -40,6 +40,6 @@ def create_colour_code_table():
 # assert(result == 25)
 # create_colour_code_table()
 # print_color_map()
-print(table_mock)
+# print(table_mock)
 # assert create_colour_code_table() == print_color_map()
 print("All is well (maybe!)\n")
