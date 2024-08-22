@@ -11,7 +11,7 @@ class Misaligned_test(unittest.TestCase):
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
             table_mock.append([i * 5 + j,major,minor])
-    mock_print_colour_map.returnvalue=table_mock
+    mock_print_colour_map.return_value=table_mock
     output_table=misaligned.print_color_map()
     print("Output_table",output_table)
     ref_table=misaligned.create_colour_code_table()
