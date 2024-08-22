@@ -1,6 +1,6 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
-global table_mock=[]
+table_mock=[]
 i=0
 
 from unittest.mock import patch, Mock
