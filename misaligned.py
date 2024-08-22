@@ -36,8 +36,8 @@ def create_colour_code_table():
             row=[]
     return table
 
-  @patch("misaligned.print_color_map")
-  def fake_print_colour_map(self,mock_print_colour_map):
+@patch("misaligned.print_color_map")
+def fake_print_colour_map(self,mock_print_colour_map):
     table_mock=[]
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
@@ -50,7 +50,7 @@ def create_colour_code_table():
     ref_table=misaligned.create_colour_code_table()
     print("Ref_table",ref_table)
     self.assertEqual(ref_table,table_mock)
-  # assert misaligned.create_colour_code_table() == table_mock
+    # assert misaligned.create_colour_code_table() == table_mock
 
 # result = print_color_map()
 # assert(result == 25)
