@@ -14,7 +14,7 @@ class Misaligned_test(unittest.TestCase):
     mock_print_colour_map.return_value=table_mock
     output_table=misaligned.print_color_map()
     print("Output_table",output_table)
-    ref_table=create_colour_code_table()
+    ref_table=misaligned.create_colour_code_table()
     print("Ref_table",ref_table)
     self.assertEqual(ref_table,table_mock)
   # assert misaligned.create_colour_code_table() == table_mock
