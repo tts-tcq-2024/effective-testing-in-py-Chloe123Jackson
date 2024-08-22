@@ -1,6 +1,6 @@
 import unittest
 import misaligned
-from unittest.mock import patch
+# from unittest.mock import patch
 
 class Misaligned_test(unittest.TestCase):
   @patch("misaligned.print_row")
