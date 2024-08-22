@@ -17,11 +17,11 @@ def print_row(row_number,major,minor):
     print(f'{row_number} | {major} | {minor}')
     
 
-@patch("misaligned.print_row")
-def fake_print_colour_map(row_number,major,minor,mock_print_row):
-    global table_moc
-    table_mock.append([row_number,major,minor])
-    mock_print_row.returnvalue = table_mock
+# @patch("misaligned.print_row")
+# def fake_print_colour_map(row_number,major,minor,mock_print_row):
+#     global table_moc
+#     table_mock.append([row_number,major,minor])
+#     mock_print_row.returnvalue = table_mock
 
 def create_colour_code_table():
     row=[]
