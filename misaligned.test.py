@@ -16,7 +16,7 @@ class Misaligned_test(unittest.TestCase):
     # print("Output_table",output_table)
     ref_table=misaligned.create_colour_code_table()
     print("Ref_table",ref_table)
-    self.assertEqual(ref_table,output_table)
+    self.assertEqual(ref_table,table_mock)
   # assert misaligned.create_colour_code_table() == table_mock
 
 if __name__ == '__main__':
