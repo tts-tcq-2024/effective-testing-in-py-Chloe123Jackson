@@ -46,8 +46,9 @@ class Misaligned_test(unittest.TestCase):
         self.assertEqual(ref_table,table_mock)
         # assert misaligned.create_colour_code_table() == table_mock
 
-result = print_color_map()
-assert(result == 25)
-
-assert fake_print_colour_map() == True
-print("All is well (maybe!)\n")
+if __name__ == '__main__':
+  unittest.main()
+    result = print_color_map()
+    assert(result == 25)
+    assert fake_print_colour_map() == True
+    print("All is well (maybe!)\n")
