@@ -1,5 +1,5 @@
 import unittest
-import misaligned
+from misaligned import create_colour_code_table
 from unittest.mock import patch
 
 class Misaligned_test(unittest.TestCase):
