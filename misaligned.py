@@ -1,6 +1,6 @@
 MAJOR_COLORS = ['White', 'Red', 'Black', 'Yellow', 'Violet']
 MINOR_COLORS = ["Blue", "Orange", "Green", "Brown", "Slate"]
-table_mock=[]
+global table_mock=[]
 i=0
 
 from unittest.mock import patch, Mock
@@ -19,7 +19,7 @@ def print_row(row_number,major,minor):
 
 @patch("misaligned.print_row")
 def fake_print_colour_map(row_number,major,minor,mock_print_row):
-    global table_mock
+    global table_moc
     table_mock.append([row_number,major,minor])
     mock_print_row.returnvalue = table_mock
 
