@@ -34,5 +34,8 @@ jobs:
     - name: misaligned fail
       run: bash .github/workflows/expectfail.sh python misaligned.py
 
+    - name: misaligned test fail
+      run: bash .github/workflows/expectfail.sh python misaligned.test.py      
+
     - name: alerter fail
       run: bash .github/workflows/expectfail.sh python alerter.py
