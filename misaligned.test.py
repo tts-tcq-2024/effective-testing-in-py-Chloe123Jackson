@@ -3,7 +3,7 @@ import misaligned
 from unittest.mock import patch
 
 class Misaligned_test(unittest.TestCase):
-  @patch("misaligned.print_color_map")
+  @patch('misaligned.print_color_map')
   def fake_print_colour_map(self,mock_print_colour_map):
     table_mock=[]
     major_colors = ["White", "Red", "Black", "Yellow", "Violet"]
