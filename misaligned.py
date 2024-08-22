@@ -48,5 +48,5 @@ def fake_print_colour_map(self,mock_print_colour_map):
 result = print_color_map()
 assert(result == 25)
 
-# assert fake_print_colour_map() == True
+assert fake_print_colour_map() == True
 print("All is well (maybe!)\n")
